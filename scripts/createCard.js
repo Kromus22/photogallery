@@ -28,7 +28,7 @@ export const createCard = async (data) => {
     href: data.user.links.html,
   });
 
-  const photo = await loadImg(data.urls.small, data.alt_description);
+  const photo = await loadImg(data.urls.small, data.description);
 
 
   const avatarAuthor = new Image();
@@ -48,7 +48,7 @@ export const createCard = async (data) => {
 
   const downloadLink = createElem('a', {
     className: 'card__download',
-    href: data.links.download,
+    href: data.urls.raw,
     download: true,
     target: '_blank',
   });

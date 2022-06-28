@@ -39,7 +39,7 @@ export const renderPhoto = (photoWrapper, photo) => {
   const photoDownload = createElem('a', {
     className: 'photo__download',
     download: 'true',
-    href: photo.links.download,
+    href: photo.urls.raw,
     target: '_blank',
   });
 
